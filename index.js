@@ -63,7 +63,7 @@ module.exports = function (sails) {
             }
 
             pass = !(util.isUndefined(util.find(config.allowedHosts, function (allowedHost) {
-              return req.host.match(allowedHost);
+              return req.hostname.match(allowedHost);
             })));
 
             if (pass) {
